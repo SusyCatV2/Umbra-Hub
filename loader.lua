@@ -1,8 +1,14 @@
-if not _G.umbraLoaded then loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/SusyCatV2/Umbra-Hub/refs/heads/main/Required.lua"))() end
-local id = game.PlaceId
+if not _G.umbraLoaded and false then 
+	local id = game.PlaceId
+	local path = "https://raw.githubusercontent.com/SusyCatV2/Umbra-Hub/refs/heads/main/"
 
-if id == 117447183017432 then
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/SusyCatV2/Umbra-Hub/refs/heads/main/ElementalConquest.lua"))()
-else
-	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/SusyCatV2/Umbra-Hub/refs/heads/main/ProjectBronzeForever.lua"))()
+	loadstring(game:HttpGetAsync(path .. "Required.lua"))() 
+
+	if id == 117447183017432 then
+		loadstring(game:HttpGetAsync(path .. "ElementalConquest.lua"))()
+	elseif id == 130247632398296 then
+		loadstring(game:HttpGetAsync(path .. "AnimeFightingSimulatorEndless.lua"))()
+	else
+		loadstring(game:HttpGetAsync(path .. "ProjectBronzeForever.lua"))()
+	end
 end
