@@ -1,4 +1,4 @@
-if not _G.umbraLoaded and false then 
+if not _G.umbraLoaded then 
 	local id = game.PlaceId
 	local path = "https://raw.githubusercontent.com/SusyCatV2/Umbra-Hub/refs/heads/main/"
 
